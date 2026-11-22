@@ -1,0 +1,13 @@
+name: hello
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: echo
+        run: |
+          echo "OK from runner"
+          uname -a
