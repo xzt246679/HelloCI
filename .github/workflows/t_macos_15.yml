@@ -1,0 +1,11 @@
+name: t_macos_15
+on:
+  workflow_dispatch:
+jobs:
+  j:
+    runs-on: macos-15
+    steps:
+      - name: probe
+        run: |
+          sw_vers || true
+          echo "runner=macos-15"
